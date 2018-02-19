@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { ShoppingListComponent } from './shoppingList/shoppingList.component';
 import { ShoppingItemComponent } from './shoppingList/shoppingItem.component';
-
+import { RecipesComponent } from './recipeBook/recipes.component';
+import { RecipeComponent } from './recipeBook/recipe.component';
 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { ShoppingItemComponent } from './shoppingList/shoppingItem.component';
     AppComponent,
     HeaderComponent,
     ShoppingListComponent,
-    ShoppingItemComponent
+    ShoppingItemComponent,
+    RecipesComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule
