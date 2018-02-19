@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
 import { ShoppingListComponent } from './shoppingList/shoppingList.component';
 import { ShoppingItemComponent } from './shoppingList/shoppingItem.component';
 import { RecipesComponent } from './recipeBook/recipes.component';
@@ -14,6 +15,7 @@ import { RecipeComponent } from './recipeBook/recipe.component';
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     ShoppingListComponent,
     ShoppingItemComponent,
     RecipesComponent,
