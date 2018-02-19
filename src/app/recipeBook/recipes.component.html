@@ -1,5 +1,11 @@
 
   <h2>Nos recettes</h2>
-  <recipe *ngFor="let recipe of recipesList">
-        {{ recipe }}
-  </recipe>
+
+  <div *ngFor="let recipe of recipesList" class="card">
+      <img src="http://via.placeholder.com/400x100" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ recipe.name }}</h5>
+        <p class="card-text">{{ (recipe.description | slice:0:150)+'...' }}</p>
+        <a href="{{ recipe.link }}" class="btn btn-primary">Voir la recette</a>
+      </div>
+    </div>
