@@ -1,8 +1,12 @@
 
   <li class="list-group-item shopping-list__item">
+    <div class="row">
+       <div class="shopping-list__item__name col-md">
        <ng-content></ng-content>
-       <div class='actions' *ngIf='isEditable'>
-         <button (click)="removeItem()">X</button>
-         <button (click)="incrementItem()">+</button>
+      </div>
+       <div class='actions col-md' *ngIf='isEditable'>
+         <button class="btn btn-danger" (click)="removeItem()">X</button>
+         <button class="btn btn-success" (click)="incrementItem()">+</button>
        </div>
+    </div>
   </li>
