@@ -40,7 +40,13 @@ import { Component } from '@angular/core';
     }
 
     addIngredientsToList(ingredients) {
-     
+      const shoppingList = document.querySelector('.shopping-list');
+      ingredients.forEach(ingredient => {
+        let item = document.createElement('li');
+            item.classList.add('list-group-item');
+            item.innerHTML = ingredient;
+        shoppingList.appendChild(item);
+      });
     }
   }
   
