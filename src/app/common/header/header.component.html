@@ -1,9 +1,25 @@
 <header class="sticky-top">
 <div class="container">
-  <nav class="nav justify-content-end">
-    <a href="" class="nav-link active">Home</a>
-    <a href="" class="nav-link">Recipes</a>
-    <a href="" class="nav-link">Shopping list</a>
+    <nav class="navbar navbar-expand-sm">
+        <a href="" class="navbar-brand">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+    <ul class="navbar-nav mr-auto">
+   
+   <li class="nav-item"><a href="" class="nav-link">Recipes</a></li>
+    <li class="nav-item"><a href="" class="nav-link">Shopping list</a></li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Manage
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Save Data</a>
+          <a class="dropdown-item" href="#">Fetch Data</a>
+        </div>
+      </li>
+    </ul>
   </nav>
 </div>
 </header>
