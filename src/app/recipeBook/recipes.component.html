@@ -7,5 +7,6 @@
         <h5 class="card-title">{{ recipe.name }}</h5>
         <p class="card-text">{{ (recipe.description | slice:0:150)+'...' }}</p>
         <a href="{{ recipe.link }}" class="btn btn-primary">Voir la recette</a>
+        <button type="button" (click)="addIngredientsToList(recipe.ingredients)" class="btn btn-outline-primary">Ajouter à la liste de courses</button>
       </div>
     </div>

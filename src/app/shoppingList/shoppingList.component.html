@@ -1,6 +1,12 @@
-<ul>
+<ul class="list-group">
   <h2>Listes de courses</h2>
-  <shopping-item *ngFor="let shoppingItem of shoppingList">
-        {{ shoppingItem }}
+  <shopping-item *ngFor="let shoppingItem of shoppingList"> 
+        {{ shoppingItem }} 
+        <div *ngIf='listIsEditable' class="actions">
+          
+        </div>
   </shopping-item>
 </ul>
+
+<button *ngIf='listIsEditable' class="btn btn-success" (click)="editShoppingList()">Ajouter des aliments</button>
+<button class="btn btn-primary" (click)="editShoppingList()"> {{ !listIsEditable ? 'Modifier la liste' : 'Enregistrer les modifications'}}</button>
