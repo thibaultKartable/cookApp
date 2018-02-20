@@ -1,6 +1,6 @@
 <ul class="list-group shopping-list">
   <h2>Listes de courses</h2>
-  <shopping-item *ngFor="let shoppingItem of shoppingList"> 
+  <shopping-item *ngFor="let shoppingItem of shoppingList" [isEditable]='listIsEditable'> 
         {{ shoppingItem }} 
         <div *ngIf='listIsEditable' class="actions">
           

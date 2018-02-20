@@ -1,4 +1,8 @@
 
   <li class="list-group-item shopping-list__item">
        <ng-content></ng-content>
+       <div class='actions' *ngIf='isEditable'>
+         <button (click)="removeItem()">X</button>
+         <button (click)="incrementItem()">+</button>
+       </div>
   </li>

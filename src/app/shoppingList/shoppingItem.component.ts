@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'shopping-item',
@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
   
   export class ShoppingItemComponent {
 
+    @Input() isEditable: boolean;
+
     constructor() {
-    
+      this.isEditable = false;
     }
   }
   
