@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
   })
   
   export class ShoppingListComponent {
-    //public shoppingList:['carotte','maïs','choux'];
     public shoppingList:Object[] = [];
     public listIsEditable:boolean;
 
