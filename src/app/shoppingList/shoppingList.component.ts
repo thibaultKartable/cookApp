@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Ingredient} from '../shared/ingredient.model';
 
 @Component({
     selector: 'shopping-list',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
   })
   
   export class ShoppingListComponent {
-    public shoppingList:Object[] = [];
+    public shoppingList: Ingredient[] = [];
     public listIsEditable:boolean;
 
     constructor() {
-      this.shoppingList = ['carotte','maïs','choux'];
+      this.shoppingList = [
+        new Ingredient('Carotte', 4),
+        new Ingredient('Tomates', 3),
+      ];
       this.listIsEditable = false;
     }
 

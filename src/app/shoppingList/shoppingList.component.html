@@ -1,12 +1,11 @@
 <ul class="list-group shopping-list">
-  <h2>Listes de courses</h2>
-  <shopping-item *ngFor="let shoppingItem of shoppingList" [isEditable]='listIsEditable'> 
-        {{ shoppingItem }} 
-        <div *ngIf='listIsEditable' class="actions">
-          
-        </div>
-  </shopping-item>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let ingredient of shoppingList">
+
+    {{ ingredient.name }}
+    <span class="badge badge-primary badge-pill">{{ ingredient.amount }} </span>
+
+  </li>
+
 </ul>
 
-<button *ngIf='listIsEditable' class="btn btn-success" (click)="editShoppingList()">Ajouter des aliments</button>
-<button class="btn btn-primary" (click)="editShoppingList()"> {{ !listIsEditable ? 'Modifier la liste' : 'Enregistrer les modifications'}}</button>

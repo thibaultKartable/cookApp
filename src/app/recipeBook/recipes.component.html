@@ -1,12 +1,24 @@
 
-  <h2>Nos recettes</h2>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">Nouvelle recette</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col">
+    <a href="" *ngFor="let recipe of recipesList" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      <div class="d-flex w-100 justify-content-between">
+        <div class="shopping-list__item__name col-md">
+          <h5 class="card-title">{{ recipe.name }}</h5>
+          <p class="card-text">{{ (recipe.description | slice:0:150)+'...' }}</p>
+        </div>
 
-  <div *ngFor="let recipe of recipesList" class="card">
-      <img src="http://via.placeholder.com/400x100" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">{{ recipe.name }}</h5>
-        <p class="card-text">{{ (recipe.description | slice:0:150)+'...' }}</p>
-        <a href="{{ recipe.link }}" class="btn btn-primary">Voir la recette</a>
-        <button type="button" (click)="addIngredientsToList(recipe.ingredients)" class="btn btn-outline-primary">Ajouter à la liste de courses</button>
+        <span class="pull-right">
+          <img src="{{recipe.imagePath}}" [alt]=" recipe.name " class="img-responsive" style="max-height:50px;">
+        </span>
       </div>
-    </div>
+    </a>
+  </div>
+</div>
+<recipe-item></recipe-item>
