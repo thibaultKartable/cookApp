@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col">
-    <img src="" alt="" class="img-responsive">
+    <h2 [innerHTML]="recipe.name"></h2>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    <h2>Recette name</h2>
+    <img [src]="recipe.imagePath" alt="" class="img-responsive">
   </div>
 </div>
 
@@ -25,7 +25,7 @@
 
 <div class="row">
   <div class="col">
-    <p>Description</p>
+    <p [innerHTML]="recipe.description"></p>
   </div>
 </div>
 

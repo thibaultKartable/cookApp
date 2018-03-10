@@ -11,5 +11,5 @@ export class Ingredient {
     /* Comme on assigne directement les attributs à la création de l'objet, typescript permet d'écrire directement
     Le constructor comme ça*/
 
-    constructor(public name: string,public amount:number) {}
+    constructor(public name: string, public amount:number) {}
 }

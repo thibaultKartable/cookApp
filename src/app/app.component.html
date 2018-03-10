@@ -1,19 +1,19 @@
-<app-header></app-header>
+<app-header (pageActivated)="onChangePage($event)"></app-header>
 
 <div class="jumbotron">
   <h1>Notre livre de recettes</h1>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="activePage === 'recipes'">
   <div class="row">
     <div class="col-sm">
         <h2>
             Nos recettes</h2>
-      <recipes></recipes>
+      <recipes (recipeSelected)="onRecipeSelected($event)"></recipes>
     </div>
 
     <div class="col-sm">
-      <recipe-detail></recipe-detail>
+      <recipe-detail [recipe]="selectedRecipe"></recipe-detail>
     </div>
   </div>
 
@@ -21,7 +21,7 @@
 
 <hr>
 
-<div class="container">
+<div class="container" *ngIf="activePage === 'shoppingList'">
   <div class="row">
     <div class="col-sm">
         <h2>Listes de courses</h2>
