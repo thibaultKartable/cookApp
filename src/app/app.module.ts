@@ -8,8 +8,9 @@ import { FooterComponent } from './common/footer/footer.component';
 import { ShoppingListComponent } from './shoppingList/shoppingList.component';
 import { RecipesComponent } from './recipeBook/recipes.component';
 import { RecipeDetailComponent } from './recipeBook/recipeDetail/recipeDetail.component';
-import { RecipeComponent } from './recipeBook/recipe/recipe.component';
+import { RecipeComponent } from './recipeBook/recipesList/recipe/recipe.component';
 import { ShoppingEditComponent } from './shoppingList/shopping-edit/shopping-edit.component';
+import { RecipesListComponent } from './recipeBook/recipesList/recipesList.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ShoppingEditComponent } from './shoppingList/shopping-edit/shopping-edi
     RecipesComponent,
     RecipeDetailComponent,
     RecipeComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    RecipesListComponent
   ],
   imports: [
     BrowserModule

@@ -1,19 +1,10 @@
-
 <div class="row">
-  <div class="col-xs-12">
-    <button class="btn btn-success">Nouvelle recette</button>
+  <div class="col-sm">
+    <app-recipes-list (recipeWasSelected)="showRecipe($event)"></app-recipes-list>
   </div>
-</div>
-<hr>
-<div class="row">
-  <div class="col">
 
-    <recipe-item
-            *ngFor="let recipe of recipesList"
-            [recipe]="recipe"
-            (recipeSelected)="showRecipe($event)"
-            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-    </recipe-item>
-
+  <div class="col-sm">
+    <recipe-detail
+      [visibleRecipe]="selectedRecipe"></recipe-detail>
   </div>
 </div>
