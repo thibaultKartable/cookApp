@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Ingredient} from '../shared/ingredient.model';
 
 @Component({
@@ -7,7 +7,7 @@ import {Ingredient} from '../shared/ingredient.model';
     styleUrls: ['./shoppingList.component.css']
   })
   
-  export class ShoppingListComponent {
+  export class ShoppingListComponent  {
     public shoppingList: Ingredient[] = [];
     public listIsEditable:boolean;
 
@@ -19,8 +19,17 @@ import {Ingredient} from '../shared/ingredient.model';
       this.listIsEditable = false;
     }
 
-    editShoppingList() {
-        this.listIsEditable = !this.listIsEditable;
+
+    onIngredientAdded(ingredient: Ingredient){
+        /*for(let i = 0; i < this.shoppingList.length; i ++) {
+            if(ingredient.name === this.shoppingList[i].name){
+                this.shoppingList[i].amount += ingredient.amount;
+            } else {
+                this.shoppingList.push(ingredient);
+            }
+        }*/
+        this.shoppingList.push(ingredient);
     }
+
   }
   
