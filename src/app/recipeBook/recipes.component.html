@@ -7,17 +7,13 @@
 <hr>
 <div class="row">
   <div class="col">
-    <a *ngFor="let recipe of recipesList" (click)="showRecipe(recipe)" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-      <div class="d-flex w-100 justify-content-between">
-        <div class="shopping-list__item__name col-md">
-          <h5 class="card-title">{{ recipe.name }}</h5>
-          <p class="card-text">{{ (recipe.description | slice:0:150)+'...' }}</p>
-        </div>
 
-        <span class="pull-right">
-          <img src="{{recipe.imagePath}}" [alt]=" recipe.name " class="img-responsive" style="max-height:50px;">
-        </span>
-      </div>
-    </a>
+    <recipe-item
+            *ngFor="let recipe of recipesList"
+            [recipe]="recipe"
+            (recipeSelected)="showRecipe($event)"
+            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+    </recipe-item>
+
   </div>
 </div>
